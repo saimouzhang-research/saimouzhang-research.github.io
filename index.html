@@ -1,0 +1,687 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.2">
+  <style type="text/css">
+    body {background-color: #f7f8f5}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #101217; -webkit-text-stroke: #101217; background-color: #f7f8f5; background-color: rgba(247, 248, 245, 0.92)}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.6px 'Helvetica Neue'; color: #101217; -webkit-text-stroke: #101217; background-color: #f7f8f5; background-color: rgba(247, 248, 245, 0.92); min-height: 15.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"><b>&lt;!DOCTYPE html&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;html lang="en"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;head&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;title&gt;Saimou Zhang&lt;/title&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;style&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>:root {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>--bg: #f8f8f7;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>--panel: #ffffff;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>--text: #1c2430;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>--muted: #677081;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>--line: #e6e8ed;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>--soft: #f1f3f6;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>--accent: #2563eb;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>--max: 1080px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>* { box-sizing: border-box; }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>html { scroll-behavior: smooth; }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>body {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>background: var(--bg);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--text);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>line-height: 1.72;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>a {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: inherit;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>text-decoration: none;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.container {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>width: min(var(--max), calc(100% - 32px));</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0 auto;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>header {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>position: sticky;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>top: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>z-index: 20;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>background: rgba(248, 248, 247, 0.9);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>backdrop-filter: blur(10px);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--line);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.nav {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>justify-content: space-between;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 18px 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 16px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.brand {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 1.05rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-weight: 700;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>letter-spacing: -0.01em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.nav-links {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 22px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>flex-wrap: wrap;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--muted);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.97rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.nav-links a:hover,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.text-link:hover {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--accent);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>main {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 38px 0 80px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.hero {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>grid-template-columns: 280px minmax(0, 1fr);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 34px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>align-items: start;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.profile-card,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.section-card,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.news-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.trajectory-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.teaching-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.research-item {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>background: var(--panel);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border: 1px solid var(--line);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border-radius: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.profile-card {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 22px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>position: sticky;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>top: 92px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.profile-photo {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>width: 140px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>height: 140px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>object-fit: cover;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border-radius: 18px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>background: var(--soft);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: block;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0 auto 16px auto;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>box-shadow: 0 8px 24px rgba(0,0,0,0.08);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.sidebar-row + .sidebar-row {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 14px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.sidebar-key {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.83rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--muted);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-bottom: 3px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.sidebar-value {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.97rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.main-col {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>min-width: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.eyebrow {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--muted);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>text-transform: uppercase;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>letter-spacing: 0.16em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.78rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-bottom: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>h1 {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: clamp(2.4rem, 5vw, 4rem);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>letter-spacing: -0.04em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>line-height: 1.04;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.subtitle {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 1.12rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #2e3744;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-weight: 500;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.intro {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 18px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>max-width: 760px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 1.04rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #344050;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.chips {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 22px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>flex-wrap: wrap;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.chip {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>background: var(--panel);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border: 1px solid var(--line);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border-radius: 999px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 8px 14px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #344050;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.92rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.section {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 34px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.section-card {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 26px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.two-col {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>grid-template-columns: 1fr 1fr;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 22px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>h2 {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0 0 16px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 1.55rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>letter-spacing: -0.02em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>h3 {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 1.02rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>letter-spacing: -0.01em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>p {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0 0 14px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.interest-list {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>flex-wrap: wrap;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 8px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.interest {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>background: var(--soft);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border-radius: 999px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 8px 12px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.92rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #394453;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.trajectory-list,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.news-list,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.research-list,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.teaching-list,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-list {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 14px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.trajectory-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.teaching-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.research-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-item {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 16px 18px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.trajectory-item {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>grid-template-columns: 96px 1fr;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 16px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>align-items: start;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.uni-photo {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>width: 96px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>height: 68px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border-radius: 12px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>object-fit: cover;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #eef3ff, #f7f8fb);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>border: 1px solid var(--line);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: block;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.meta {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.88rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--muted);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 3px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.news-item {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>grid-template-columns: 60px 1fr;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 12px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>align-items: start;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 16px 18px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.news-year {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-weight: 700;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #2f3d52;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.news-text {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #344050;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.research-item p,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-authors,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-venue,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-links {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 6px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-item {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>transition: background 0.2s ease;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>grid-template-columns: 70px 1fr;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 16px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>align-items: start;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-item:hover {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>background: #f3f4f6;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-year {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.92rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--muted);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-weight: 600;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding-top: 2px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-main {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>min-width: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-title {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-weight: 650;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 1rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>line-height: 1.5;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-title a {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--text);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-weight: 650;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-title a:hover {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--accent);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-authors {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #2f3a49;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.95rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-venue {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--muted);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.93rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-style: italic;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.pub-links {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>flex-wrap: wrap;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 14px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.92rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--accent);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>.contact-links {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>flex-wrap: wrap;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 16px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 12px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>footer {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 36px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>color: var(--muted);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 0.92rem;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>padding-top: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>@media (max-width: 900px) {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.hero,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.two-col {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.profile-card {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>position: static;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>@media (max-width: 640px) {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.container {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>width: min(var(--max), calc(100% - 22px));</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.nav {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>align-items: flex-start;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>flex-direction: column;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.section-card,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.profile-card {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>padding: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.pub-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.news-item,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>.trajectory-item {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;/style&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;/head&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;body&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;header&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;div class="container nav"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>&lt;a class="brand" href="#top"&gt;Saimou Zhang&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>&lt;nav class="nav-links"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;a href="#about"&gt;About&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;a href="#research"&gt;Research&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;a href="#teaching"&gt;Teaching&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;a href="#publications"&gt;Publications&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>&lt;/nav&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;/header&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;main id="top" class="container"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>&lt;aside class="profile-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;img src="photo.jpg" alt="Saimou Zhang" class="profile-photo"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div class="sidebar-row"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="sidebar-key"&gt;Email&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="sidebar-value"&gt;&lt;a class="text-link" href="mailto:saimouz2@illinois.edu"&gt;saimouz2@illinois.edu&lt;/a&gt;&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div class="sidebar-row"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="sidebar-key"&gt;Affiliation&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="sidebar-value"&gt;University of Illinois Urbana-Champaign&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div class="sidebar-row"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="sidebar-key"&gt;Current role&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="sidebar-value"&gt;Ph.D. Student, Linguistics&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div class="sidebar-row"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="sidebar-key"&gt;Links&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="sidebar-value"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;a class="text-link" href="https://scholar.google.com/citations?user=-srXsyQAAAAJ&amp;hl=en" target="_blank"&gt;Google Scholar&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>&lt;/aside&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>&lt;div class="main-col"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div class="eyebrow"&gt;Academic homepage&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;h1&gt;Saimou (Simon) Zhang&lt;/h1&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div class="subtitle"&gt;Ph.D. student in Linguistics · University of Illinois Urbana-Champaign&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;p class="intro"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>I work at the intersection of computational linguistics, discourse analysis, writing assessment,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>psycholinguistics, and human-computer interaction. My research asks how linguistic theory,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>computational methods, and human-centered design can deepen our understanding of writing,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>coherence, and AI-mediated language use.</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/p&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div class="chips"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;span class="chip"&gt;Computational Linguistics&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;span class="chip"&gt;Discourse &amp;amp; Coherence&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;span class="chip"&gt;Writing Assessment&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;span class="chip"&gt;Psycholinguistics&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;span class="chip"&gt;Language &amp;amp; HCI&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;section id="about" class="section two-col"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;h2&gt;About&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>I study language, writing, and cognition using both theoretical and computational approaches.</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>My background spans applied linguistics, statistics, educational measurement, discourse analysis,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>and language teaching.</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>I am especially interested in computational models of discourse, coherence in writing,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>AI-mediated writing support, and language technologies that better serve learners,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>writers, and educators.</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;h2&gt;Interests&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="interest-list"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;span class="interest"&gt;Computational linguistics&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;span class="interest"&gt;Discourse structure&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;span class="interest"&gt;Coherence&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;span class="interest"&gt;Writing assessment&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;span class="interest"&gt;Psycholinguistics&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;span class="interest"&gt;Human-computer interaction&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;span class="interest"&gt;Educational NLP&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;span class="interest"&gt;Corpus linguistics&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;section class="section section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;h2&gt;Trajectory&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="trajectory-list"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="trajectory-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;img src="uiuc.jpg" alt="University of Illinois Urbana-Champaign campus" class="uni-photo"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;University of Illinois Urbana-Champaign&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="meta"&gt;Ph.D., Linguistics (Computational Linguistics track) · 2025–2030 expected&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="trajectory-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;img src="uchicago.jpg" alt="University of Chicago campus" class="uni-photo"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;University of Chicago&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="meta"&gt;Visiting Student, Computer Science · 2026 · Host: Mina Lee&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="trajectory-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;img src="udel.jpg" alt="University of Delaware campus" class="uni-photo"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;University of Delaware&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="meta"&gt;Ph.D. studies, Educational Statistics &amp;amp; Research Methods · 2022–2023&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="trajectory-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;img src="sfu.jpg" alt="Simon Fraser University campus" class="uni-photo"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;Simon Fraser University&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="meta"&gt;B.Sc., Statistics major and Linguistics minor · 2018–2024&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="trajectory-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;img src="ubc.jpg" alt="University of British Columbia campus" class="uni-photo"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;University of British Columbia&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="meta"&gt;M.Ed., Education (Applied Linguistics) · 2015–2018&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;section id="research" class="section two-col"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;h2&gt;Recent News&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="news-list"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="news-item"&gt;&lt;span class="news-year"&gt;2026&lt;/span&gt;&lt;span class="news-text"&gt;Visiting student in Computer Science at the University of Chicago, hosted by Dr. Mina Lee.&lt;/span&gt;&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="news-item"&gt;&lt;span class="news-year"&gt;2026&lt;/span&gt;&lt;span class="news-text"&gt;Presenting research on linguistic and cognitive empowerment via human-computer interaction datasets in the age of LLMs.&lt;/span&gt;&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="news-item"&gt;&lt;span class="news-year"&gt;2026&lt;/span&gt;&lt;span class="news-text"&gt;Research assistant at UIUC supporting language assessment research initiatives.&lt;/span&gt;&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="news-item"&gt;&lt;span class="news-year"&gt;2025&lt;/span&gt;&lt;span class="news-text"&gt;Began Ph.D. in Linguistics at UIUC.&lt;/span&gt;&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;h2&gt;Research&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="research-list"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="research-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;Computational discourse and coherence&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;p&gt;Modeling discourse organization, topic development, rhetorical relations, and information flow in writing.&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="research-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;Writing assessment and educational NLP&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;p&gt;Studying how computational methods and AI tools can support evaluation, feedback, and writer development.&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="research-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;Human-computer interaction for language&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;p&gt;Exploring how people think, write, and learn with AI systems and language technologies.&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;section id="teaching" class="section two-col"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;h2&gt;Teaching&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="teaching-list"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="teaching-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;English Instructor, University of Illinois Urbana-Champaign&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="meta"&gt;2025–present&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;p&gt;ESL 511 Written &amp;amp; Oral Communication; ESL 525 Business Communication.&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="teaching-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;English Lecturer, Beijing Normal University – Hong Kong Baptist University&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="meta"&gt;2020–2025&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;p&gt;Taught EAP, writing, and communication courses with attention to discourse and rhetorical organization.&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;h2&gt;Skills&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="teaching-list"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="teaching-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;Programming&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;p&gt;Python, R; basic Java and C.&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="teaching-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;Languages&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;p&gt;English (C2), French (B2), Chinese (native).&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="teaching-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;h3&gt;Training&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;p&gt;LSA Linguistics Institute, CELTA, SIG Writing Research School.&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;section id="publications" class="section section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;h2&gt;Selected Publications&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="pub-list"&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="pub-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="pub-year"&gt;2024&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="pub-main"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-title"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;a href="https://doi.org/10.1016/j.caeo.2024.100194" target="_blank"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>A Latent Dirichlet Allocation Approach to Understanding Students’ Perceptions of Automated Writing Evaluation</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-authors"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>Joshua Wilson*, &lt;b&gt;Saimou Zhang*&lt;/b&gt;, Corey Palermo, Tania Cruz Cordero, Fan Zhang, Matthew C. Myers, Andrew Potter, Halley Eacker, Jessica Coles</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-venue"&gt;Computers and Education Open, 2024. *Co-first authors.&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-links"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;a href="https://doi.org/10.1016/j.caeo.2024.100194" target="_blank"&gt;Paper&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="pub-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="pub-year"&gt;2024&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="pub-main"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-title"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;a href="https://doi.org/10.1016/j.caeo.2024.100231" target="_blank"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>Middle School Teachers’ Implementation and Perceptions of Automated Writing Evaluation</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-authors"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>Joshua Wilson, Amanda Delgado, Corey Palermo, Tania Cruz Cordero, Matthew C. Myers, Halley Eacker, Andrew Potter, Jessica Coles, &lt;b&gt;Saimou Zhang&lt;/b&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-venue"&gt;Computers and Education Open, 2024.&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-links"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;a href="https://doi.org/10.1016/j.caeo.2024.100231" target="_blank"&gt;Paper&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="pub-item"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="pub-year"&gt;2024&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;div class="pub-main"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-title"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;a href="https://doi.org/10.4324/9781003397618" target="_blank"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>Relationships Between Teachers' Perceptions and Use of AWE and Gains in Students' Writing Performance</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-authors"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>Amanda Delgado, Joshua Wilson, Corey Palermo, Tania Cruz Cordero, Matthew C. Myers, Halley Eacker, Andrew Potter, Jessica Coles, &lt;b&gt;Saimou Zhang&lt;/b&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-venue"&gt;In &lt;em&gt;Routledge International Handbook of Automated Essay Evaluation&lt;/em&gt;, 2024.&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="pub-links"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                  </span>&lt;a href="https://doi.org/10.4324/9781003397618" target="_blank"&gt;Paper&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">              </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;section id="contact" class="section section-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;h2&gt;Contact&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>I’m happy to connect on topics related to computational linguistics, discourse analysis,</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>writing studies, AI for education, and language-focused HCI.</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;div class="contact-links"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;a class="text-link" href="mailto:saimouz2@illinois.edu"&gt;Email&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;a class="text-link" href="https://scholar.google.com/citations?user=-srXsyQAAAAJ&amp;hl=en" target="_blank"&gt;Google Scholar&lt;/a&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;footer&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">          </span>© 2026 Saimou Zhang.</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/footer&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">      </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;/section&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;/main&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;/body&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;/html&gt;</b></span></p>
+</body>
+</html>
