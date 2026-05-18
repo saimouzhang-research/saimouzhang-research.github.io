@@ -33,25 +33,35 @@
     }
 
     .youtube-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 14px;
-        padding: 12px 22px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, #ff0033, #ff4d6d);
-        color: white;
-        font-weight: 600;
-        font-size: 0.95rem;
-        letter-spacing: 0.01em;
-        box-shadow: 0 8px 22px rgba(255, 0, 51, 0.25);
-        transition: all 0.22s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    
+      padding: 7px 14px;
+      margin-left: 10px;
+    
+      border: 1px solid #d7dce5;
+      border-radius: 999px;
+    
+      background: #ffffff;
+      color: #344050;
+    
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    
+      transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease,
+        background 0.18s ease;
     }
     
     .youtube-button:hover {
-        transform: translateY(-2px) scale(1.02);
-        box-shadow: 0 12px 30px rgba(255, 0, 51, 0.35);
-        filter: brightness(1.05);
+      border-color: #2563eb;
+      color: #2563eb;
+      background: #f8fbff;
+      transform: translateY(-1px);
     }
     
     .container {
@@ -636,13 +646,13 @@
           Broadly speaking, I study how the linguistic and cognitive affordances provided by generative AI
           shape and are shaped by human-computer collaborative writing processes, across genres and across diverse populations.
           To do so, I use both experimental and computational approaches. 
-          You are welcome to explore my current research talk here:
-          <a 
-            href="https://youtu.be/dMZg9aDFwIY" 
-            target="_blank" 
+          You are welcome to explore my current research talk here
+          <a
+            href="https://youtu.be/dMZg9aDFwIY"
+            target="_blank"
             class="youtube-button"
           >
-            ▶ Watch Research Talk
+            ▶ Research Talk
           </a>
         </p>
 
